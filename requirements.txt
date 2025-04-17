@@ -1,0 +1,5 @@
+flasgger
+marshmallow
+flask
+flask_sqlalchemy
+flask_jwt_extended
