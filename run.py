@@ -10,6 +10,8 @@ from app.routes.warehouses import bp as warehouse_bp
 def create_app():
     app = Flask(__name__)
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///warehouse.db'
+    # Security note: be carefulm your secret key is exposed and is set to a 'default value'
+    # This can potentially be abused. consider moving it to .env
     app.config['JWT_SECRET_KEY'] = 'super-secret-key'
     app.config['SWAGGER'] = {'title': 'Warehouse API', 'uiversion': 3}
 
